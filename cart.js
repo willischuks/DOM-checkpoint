@@ -3,7 +3,7 @@ if (document.readyState == 'loading') {
 } else {
   ready()
 }
-
+// remove buttons
 function ready() {
   var removeCartItemButtons = document.getElementsByClassName('btn-danger')
   for (var i = 0; i < removeCartItemButtons.length; i++) {
@@ -16,7 +16,8 @@ function ready() {
       var input = quantityInputs[i]
       input.addEventListener('change', quantityChanged)
   }
-
+  
+    // add event listeners
   var addToCartButtons = document.getElementsByClassName('shop-item-button')
   for (var i = 0; i < addToCartButtons.length; i++) {
       var button = addToCartButtons[i]
@@ -26,6 +27,7 @@ function ready() {
   document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
 }
 
+// purchaced alert
 function purchaseClicked() {
   alert('Thank you for your purchase')
   var cartItems = document.getElementsByClassName('cart-items')[0]
@@ -101,3 +103,15 @@ function updateCartTotal() {
   total = Math.round(total * 100) / 100
   document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
 }
+
+
+
+const likeButtons = document.querySelectorAll('.like-button');
+
+// like buttons
+likeButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    button.classList.toggle('liked');
+    
+  });
+});

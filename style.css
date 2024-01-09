@@ -84,7 +84,7 @@ body{
     font-weight: 300;
     color: #d8c375;
     margin-top: 20px;
-    margin-left: 05%;
+    margin-right: 40%;
 }
 
 .shop-item button{
@@ -97,9 +97,8 @@ body{
     margin-top: 10px;
     
 }
-.shop-item-price{
-    display: flex;
-    justify-content: space-between;
+.shop-item-details{
+    margin-right: 30%;
 }
 
 .cart-row{
@@ -135,3 +134,16 @@ body{
     margin-left: 45%;
     margin-bottom: 10px;
 }
+.like-button {
+    background-color: gray; /* Initial color */
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out; /* Smooth color transition */
+    margin-left: 50%;
+    }
+    
+    .like-button.liked {
+        background-color: red; /* Liked color */
+    }
